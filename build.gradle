@@ -1,0 +1,29 @@
+group 'spock-workshop'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java { srcDirs = [] }
+        groovy { srcDir 'src' }
+    }
+    test {
+        java { srcDirs = [] }
+        groovy { srcDir 'tests' }
+    }
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:2.4.1"
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+    testRuntime "cglib:cglib-nodep:3.1"
+    testRuntime "org.objenesis:objenesis:2.1"
+}
