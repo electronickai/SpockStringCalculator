@@ -72,4 +72,14 @@ class StringCalculatorSpec extends Specification {
         expect:
         calculator.add("//[*%][%*]\n4%*5*%6") == 15
     }
+
+    def "Invalid inputs should return a valid error message - fake error handler to illustrate mocking" () {
+        given: "an error handler to handle the exception caused by wrong input"
+        ErrorHandler handler = Mock(ErrorHandler)
+        calculator.setErrorHandler(handler)
+        when: "The wrong input is taken"
+        calculator.add("//")
+        then: "The handler should be invoked to handle the error"
+        1 * handler.handleError(_ as IllegalStateException)
+    }
 }
