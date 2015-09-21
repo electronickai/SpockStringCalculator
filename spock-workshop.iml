@@ -22,5 +22,16 @@
     <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: cglib:cglib-nodep:3.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.objenesis:objenesis:2.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.codehaus.groovyfx:groovyfx:0.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.ow2.asm:asm:5.0.2" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library name="Gradle: jfxrt">
+        <CLASSES>
+          <root url="jar://C:/Program Files/Java/jdk1.8.0_20/jre/lib/ext/jfxrt.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

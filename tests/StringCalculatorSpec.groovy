@@ -1,3 +1,5 @@
+import calculator.JavaStringCalculator
+import common.ErrorHandler
 import spock.lang.*
 
 @Title("String Calculator Kata")
@@ -7,9 +9,9 @@ based on http://osherove.com/tdd-kata-1/""")
 class StringCalculatorSpec extends Specification {
 
     @Subject
-    //def calculator = new JavaStringCalculator()
+    def calculator = new JavaStringCalculator()
     //def calculator = new GroovyStringCalculator()
-    def calculator = new SimpleGroovyStringCalculator()
+    //def calculator = new SimpleGroovyStringCalculator()
 
     @See("Requirement 1")
     def "The result of an empty string is 0"() {

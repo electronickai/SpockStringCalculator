@@ -1,3 +1,7 @@
+package calculator
+
+import common.ErrorHandler
+
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 

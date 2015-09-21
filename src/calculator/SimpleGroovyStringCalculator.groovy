@@ -1,3 +1,7 @@
+package calculator
+
+import common.ErrorHandler
+
 /**
  * Created by schmidka on 19.09.2015.
  */
@@ -31,7 +35,7 @@ class SimpleGroovyStringCalculator {
         }
 
         def separatorAndNumbersMatcher = numbers =~ '//(.*)\\n(.*)' //check for separator and number parts
-        if (numbers.startsWith('//') && separatorAndNumbersMatcher.size() != 3) {
+        if (numbers?.startsWith('//') && separatorAndNumbersMatcher.size() != 3) {
             //fake call to error handler to pass the test that uses mocking
             handler.handleError(new IllegalStateException())
         }
